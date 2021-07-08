@@ -6,8 +6,10 @@ function formatString(string $input): string
     $withoutMarks = preg_replace($pMarksPattern, '', $input);
 
     $vowelsPattern = '/[aeiouy]/';
-    $withUpperVowels = preg_replace_callback($vowelsPattern, function ($matches) {
-        return strtoupper($matches[0]);
-    }, $withoutMarks);
+    $withUpperVowels = preg_replace_callback(
+        $vowelsPattern,
+        static fn ($matches): string => strtoupper($matches[0]),
+        $withoutMarks
+    );
     return strrev($withUpperVowels);
 }
