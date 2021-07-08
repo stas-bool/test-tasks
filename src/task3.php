@@ -1,8 +1,5 @@
 <?php
 
-$arr = [3, -7, 0];
-print_r(minAbsDiff($arr));
-
 function minAbsDiff(array $array): int
 {
     $minAbsDiff = INF;

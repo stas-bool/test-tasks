@@ -1,9 +1,6 @@
 <?php
 
-$input = 'hello, world!';
-print_r(formatString($input));
-
-function formatString($input): string
+function formatString(string $input): string
 {
     $pMarksPattern = '/[.,:;\-_?!()\[\]\'"]/';
     $withoutMarks = preg_replace($pMarksPattern, '', $input);

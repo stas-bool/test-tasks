@@ -1,10 +1,6 @@
 <?php
 
-$arr = [1, 5, 3, 4, 2];
-$k = 2;
-print_r(pairs($arr, $k));
-
-function pairs($arr, $k): int
+function pairs(array $arr, int $k): int
 {
     $result = 0;
     foreach ($arr as $iKey => $iValue) {
