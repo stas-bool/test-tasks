@@ -19,8 +19,16 @@ class Task4Test extends TestCase
     public function provider(): array
     {
         return [
-            [[1, 5, 3, 4, 2], 2, 3],
-            [[1, 2, 3, 4], 1, 3],
+            [
+                [1, 5, 3, 4, 2],
+                2,
+                3
+            ],
+            [
+                [1, 2, 3, 4],
+                1,
+                3
+            ],
         ];
     }
 }

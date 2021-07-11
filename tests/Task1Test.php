@@ -10,10 +10,8 @@ class Task1Test extends TestCase
 {
     /**
      * @dataProvider provider
-     * @param $array
-     * @param $result
      */
-    public function testSecondMax($array, $result): void
+    public function testSecondMax(array $array, int $result): void
     {
         self::assertEquals($result, secondMax($array));
     }
@@ -21,10 +19,22 @@ class Task1Test extends TestCase
     public function provider(): array
     {
         return [
-            [[1, 2, 3, 4], 3],
-            [[34, 0, -3], 0],
-            [[-10, -5, -3, -1], -3],
-            [[0, 1], 0],
+            [
+                [1, 2, 3, 4],
+                3
+            ],
+            [
+                [34, 0, -3],
+                0
+            ],
+            [
+                [-10, -5, -3, -1],
+                -3
+            ],
+            [
+                [0, 1],
+                0
+            ],
         ];
     }
 }
